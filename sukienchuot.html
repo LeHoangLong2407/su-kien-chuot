@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>sự kiện chuột</title>
+</head>
+<body>
+	<form>
+		<img id="myball" src="h.png" style="width: 500px; height:500px" />
+    	<p>nhấn vào đây để sút bóng</p>
+    	<input type="button" value="Click Me" onclick="moveRight();" />
+	</form>
+	<script >
+		var ball = null;
+		ball = document.getElementById('myball');
+		function init(){
+     		ball = document.getElementById('myball');
+     		ball.style.position= 'relative'; 
+     		ball.style.left = '0px'; 
+		}
+		function moveRight(){
+    		ball.style.left = parseInt(ball.style.left) + 100 + 'px';
+		}	
+		window.onload = init;
+	</script>
+</body>
+</html>
